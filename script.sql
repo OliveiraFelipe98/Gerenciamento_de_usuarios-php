@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS trabalho_02;
+USE trabalho_02;
+
+CREATE TABLE IF NOT EXISTS usuarios (
+    id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    status ENUM('ativo', 'inativo') DEFAULT 'ativo',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
